@@ -4,7 +4,7 @@ import './../styles/App.css';
 
 
 const App = () => {
-  const [data, setData] = useState([])
+  const [data, setData] = useState(null)
   function getData(){
     fetch('https://reqres.in/api/users')
     .then(data=>data.json())
@@ -25,8 +25,8 @@ const App = () => {
             </tr>
           </thead>
           <tbody>
-            {
-              data.map(el=>{
+            {data?
+              (data.map(el=>{
                 return (
                   <tr key={el.id}>
                     <td>{el.first_name}</td>
@@ -35,7 +35,9 @@ const App = () => {
                     <td><img src={el.avatar} alt="" /></td>
                   </tr>
                 )
-              })
+              }))
+              :
+              <tr><td>No data found</td></tr>
             }
           </tbody>
         </table>
