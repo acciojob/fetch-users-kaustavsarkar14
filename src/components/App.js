@@ -37,7 +37,7 @@ const App = () => {
                     <td>{people.first_name}</td>
                     <td>{people.last_name}</td>
                     <td>{people.email}</td>
-                    <img src={people.avatar} alt="" />
+                    <td><img src={people.avatar} alt="" /></td>
                   </tr>
                 )
               })
