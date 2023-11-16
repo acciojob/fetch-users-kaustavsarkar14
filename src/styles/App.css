@@ -1,1 +1,18 @@
-
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+}
+button {
+    background-color: blue;
+    color: white;
+    border: none;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+thead {
+    background-color: black;
+    color: white;
+}
